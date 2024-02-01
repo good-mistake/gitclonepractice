@@ -18,7 +18,6 @@ const Subscription = () => {
         setError("An error occurred in Subscription. Please try again.");
       });
   }, [username]);
-  console.log(subscription);
   return (
     <div className="container">
       <h2

@@ -62,7 +62,6 @@ const Repository = () => {
   const handleUser = (userLogin) => {
     navigate(`/users/${userLogin}?refresh=true`);
   };
-  console.log(tags);
   const setTime = (user) => {
     const createTime = user.created_at;
     const pushedTime = user.pushed_at;
@@ -79,7 +78,6 @@ const Repository = () => {
       </>
     );
   };
-  console.log(tags);
   return (
     <>
       <div className="container">

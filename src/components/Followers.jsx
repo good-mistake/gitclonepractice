@@ -20,7 +20,6 @@ const Followers = () => {
       });
   }, [username]);
 
-  console.log(followers);
   return (
     <div className="container">
       <div className="userName">{username} Followers </div>

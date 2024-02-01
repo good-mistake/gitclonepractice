@@ -30,20 +30,15 @@ const Gettopics = () => {
     }
   }, []);
   const getTopic = Object.entries(topic);
-  console.log(topic);
   return (
     <>
       {topic
-        ? getTopic.map(([key, value]) => {
-            return (
-              <div>{`${key} =${
-                value.length < 1
-                  ? "  No Topics was provided by the user."
-                  : value
-              }`}</div>
-            );
-          })
-        : "No topic was provided by the users."}{" "}
+        ? getTopic.map(([key, value], index) => (
+            <div key={index}>{`${key} =${
+              value.length < 1 ? "  No Topics was provided by the user." : value
+            }`}</div>
+          ))
+        : "No topic was provided by the users."}
       {error && <div className="errorMessage">{error}</div>}
     </>
   );

@@ -104,20 +104,17 @@ const Language = () => {
             </Pie>
           </PieChart>
           <div>
-            {getLang.map(([key, value], index) => {
-              return (
-                <>
-                  <div
-                    className="languageName"
-                    style={{
-                      backgroundColor: COLORS[index % COLORS.length],
-                    }}
-                  >
-                    {key} : {value}
-                  </div>
-                </>
-              );
-            })}
+            {getLang.map(([key, value], index) => (
+              <div
+                key={index}
+                className="languageName"
+                style={{
+                  backgroundColor: COLORS[index % COLORS.length],
+                }}
+              >
+                {key} : {value}
+              </div>
+            ))}
           </div>
         </div>
       ) : (

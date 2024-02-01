@@ -28,9 +28,9 @@ const Header = () => {
             y2="55.93"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0" stop-color="#a4a4a4"></stop>
-            <stop offset=".619" stop-color="gray"></stop>
-            <stop offset="1" stop-color="#6f6f6f"></stop>
+            <stop offset="0" stopColor="#a4a4a4"></stop>
+            <stop offset=".619" stopColor="gray"></stop>
+            <stop offset="1" stopColor="#6f6f6f"></stop>
           </linearGradient>
           <path
             fill="url(#uCZz3JcUOJjrtrvOyVUpab_SyIpM4vSpYTF_gr2)"

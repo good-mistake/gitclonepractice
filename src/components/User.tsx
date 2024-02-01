@@ -115,7 +115,6 @@ const User: React.FC = () => {
     getRepos();
   }, [userData]);
   const sliced = repos.slice(0, 9);
-  console.log(repos);
   return (
     <>
       <div className="container">

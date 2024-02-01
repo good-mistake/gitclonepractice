@@ -20,7 +20,6 @@ const Tree = () => {
           },
         }
       );
-      console.log("Fetched branches:", res.data);
       setSha(res.data);
     } catch (e) {
       console.log(e);
@@ -30,12 +29,6 @@ const Tree = () => {
   useEffect(() => {
     const fetchTree = async (commitSha, branchName) => {
       try {
-        console.log(
-          "Fetching tree for commitSha:",
-          commitSha,
-          "branchName:",
-          branchName
-        );
         const res = await octokit.request(
           `GET /repos/${username}/${repoName}/git/trees/${commitSha}`,
           {
@@ -44,7 +37,6 @@ const Tree = () => {
             },
           }
         );
-        console.log("Fetched tree data:", res.data.tree);
         return res.data.tree.map((item) => ({ ...item, branch: branchName }));
       } catch (e) {
         console.log("Error fetching tree data:", e);
@@ -83,10 +75,6 @@ const Tree = () => {
     setIsOpen(branchName === isOpen ? null : branchName);
   };
 
-  useEffect(() => {
-    console.log("sha:", sha);
-  }, [sha]);
-  console.log(tree);
   const getTree = () => {
     setForceRerender((prev) => prev + 1);
   };

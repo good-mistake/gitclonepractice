@@ -30,7 +30,6 @@ const Contribution = () => {
     }
     fetchContributors();
   }, [username, repoName]);
-  console.log(contribute);
   const handleUser = (userLogin) => {
     navigate(`/users/${userLogin}?refresh=true`);
   };

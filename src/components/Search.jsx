@@ -37,7 +37,6 @@ const Search = () => {
     }
     fetchTopic();
   }, [userInput]);
-  console.log(search);
   const handleShowResult = () => {
     navigate(`/search/result/${userInput}`);
   };
