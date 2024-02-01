@@ -1,0 +1,577 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url("https://images.unsplash.com/photo-1654277041218-84424c78f0ae?q=80&w=1462&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    no-repeat center center fixed;
+  background-size: cover;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: rgba(255, 255, 255, 0.956);
+  border-radius: 5px;
+}
+.userName {
+  text-align: center;
+  margin: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.success {
+  color: #10b981;
+  font-size: 1.25rem;
+}
+.fail {
+  color: rgba(255, 0, 0, 0.63);
+  font-size: 1.25rem;
+}
+.userProfilePage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 15px;
+  cursor: pointer;
+}
+.userProfilePage img {
+  width: 6%;
+  height: 6%;
+  border-radius: 50%;
+}
+.loading {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 1rem;
+}
+/* Stylings in Login component below */
+.containerInLogin {
+  background: url("https://images.unsplash.com/photo-1654277041218-84424c78f0ae?q=80&w=1462&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    no-repeat center center fixed;
+  background-size: cover;
+  background-color: #c5c5c5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100vh;
+}
+.containerInLogin form {
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.5);
+  background-color: rgba(31, 31, 31, 0.6);
+  padding: 25px 50px;
+  border-radius: 10px;
+}
+.containerInLogin form > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.containerInLogin form label {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: rgb(255, 255, 255);
+}
+.containerInLogin form input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+
+  width: 400px;
+  border: none;
+  border-bottom: 1px solid #757575;
+  border-radius: 5px;
+}
+.containerInLogin form input:focus {
+  border: 1px solid #757575;
+  outline: none;
+}
+.containerInLogin button {
+  padding: 13px 30px;
+  background-color: #2b2b2b;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.containerInLogin p {
+  color: rgb(255, 255, 255);
+}
+/* End of Login component */
+/* Stylings in User and some of repository component below */
+.profilePageDisplay {
+  display: flex;
+}
+.containerInUser,
+.containerInRepository {
+  width: 30%;
+  padding: 20px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.containerInUser div,
+.containerInRepository div {
+  margin: 20px 0;
+  line-height: 1.5rem;
+  text-align: center;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgb(194, 194, 194);
+}
+.containerInUser img,
+.containerInRepository img {
+  width: 50%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.clickable {
+  color: rgb(63, 130, 255);
+  cursor: pointer;
+}
+.mainInUser {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainInUser > div:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+.mainInUser > div:last-child {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(223, 219, 219);
+  margin: 1rem 0;
+  padding: 10px;
+}
+.repos {
+  margin: 1rem;
+  width: 70%;
+  padding: 1rem;
+}
+.repoList {
+  display: flex;
+  width: 40%;
+  border: 1px solid rgb(184, 184, 184);
+  padding: 15px;
+  margin: 10px;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-size: 12px;
+}
+.card-header {
+  padding: 16px;
+  font-size: 18px;
+}
+
+.cardBody {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.codeLanguage {
+  margin-top: 2rem;
+}
+.private-or-public {
+  border: 1px solid rgb(158, 158, 158);
+  font-size: 0.75rem;
+  border-radius: 2em;
+  padding: 5px 10px;
+  font-weight: 500;
+  white-space: nowrap;
+  color: gray;
+}
+.repoListName {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/* .repositoriesInMain {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+} */
+.clickableRepo {
+  cursor: pointer;
+}
+/* End of User component */
+/* Stylings is Search and Header components */
+.searchInput {
+  border: 0;
+  width: 100%;
+
+  padding: 15px 20px;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0px 8px 15px rgba(75, 72, 72, 0.1);
+}
+.searchInput:focus {
+  outline: none;
+}
+.containerInHeader {
+  display: flex;
+  justify-content: space-around;
+  /* margin-bottom: 1rem; */
+}
+.containerInSearch {
+  display: flex;
+  align-items: center;
+}
+.containerInSearch button {
+  padding: 15px 15px;
+  border: none;
+  cursor: pointer;
+  background-color: #6f6c74;
+  color: #ffffff;
+}
+.containerInHeader h2 {
+  color: whitesmoke;
+}
+.containerInHeader > div {
+  display: flex;
+  align-items: center;
+}
+/* .containerInHeader svg {
+  background-color: white;
+} */
+/* End of search and header section */
+/* Stylings in repositories below */
+.containerInRepositories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.containerInRepositories > div {
+  border: 1px solid rgb(168, 168, 168);
+  margin: 1rem;
+  width: 40%;
+  padding: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.containerInRepositories > div div {
+  margin: 5px;
+}
+/* End of repositories section */
+/* Stylings in repository and language and other sub components below */
+.containerInRepository {
+  flex-wrap: wrap;
+  text-align: center;
+}
+.containerInRepository div {
+  border: none;
+  font-size: 14px;
+}
+.userRepositoryPage {
+  display: flex;
+  justify-content: space-around;
+}
+.languageContainer {
+  display: flex;
+  align-items: center;
+}
+.languageName {
+  color: rgb(230, 226, 226);
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin: 5px;
+}
+.mainInRepository {
+  width: 70%;
+}
+.containerInUpdateRepo {
+  background: #fff;
+  padding: 2em;
+
+  border-radius: 0.75rem;
+  line-height: 1.6;
+  overflow: hidden;
+  margin: 1rem 1rem 1rem 2rem;
+  font-size: 0.875rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.containerInUpdateRepo input {
+  background: #f9fafb;
+
+  font-size: 1rem;
+
+  box-shadow: none;
+  border-radius: 0.25rem;
+  border: 1px solid #c0c4c9;
+  border-bottom: 2px;
+  color: #20242f;
+  width: 100%;
+  padding: 0.75rem;
+
+  line-height: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: all 0.15s ease-out;
+}
+.containerInUpdateRepo input:focus {
+  outline: none;
+}
+.containerInUpdateRepo label,
+.selectInUpdateRepo {
+  font-weight: 500;
+  display: block;
+  color: #374151;
+  font-size: 1rem;
+
+  margin-bottom: 1rem;
+  white-space: normal;
+  line-height: 2.25rem;
+}
+.selectInUpdateRepo {
+  background: #f9fafb;
+
+  width: 50%;
+  padding: 0.5rem 0;
+  border-radius: 0.25rem;
+  border: 1px solid #c0c4c9;
+}
+.containerInUpdateRepo button {
+  background: #0ea271;
+  padding: 1em 1.5em;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #10b981;
+
+  color: #fff;
+  font-weight: 500;
+  margin-top: 2rem;
+  cursor: pointer;
+  border: 0;
+}
+
+.containerInContribution img {
+  width: 30%;
+}
+
+.treeInfo {
+  margin-left: 10px;
+  overflow: hidden;
+  display: block;
+}
+.branchName {
+  font-weight: bold;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+  overflow: hidden;
+}
+
+.active {
+  display: block;
+  overflow: hidden;
+}
+
+.treeItem {
+  margin-left: 10px;
+}
+
+.treeBranch {
+  border: 1px solid #bfbfbf;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.treeNode.open::before {
+  content: "➖";
+  transform: rotate(0deg);
+}
+
+.treeNode.closed::before {
+  content: "➕";
+  transform: rotate(90deg);
+}
+
+.treeNode {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.branchContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.getTree {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #c3bfbf;
+  cursor: pointer;
+}
+.branchContainer > div {
+  margin: 10px;
+  width: 33%;
+  border: 1px solid rgb(156, 156, 156);
+
+  padding: 10px;
+  border-radius: 10px;
+}
+.treeChildren {
+  margin-left: 20px;
+}
+.mainInTreeComponent,
+.languageComponent {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  margin: 1rem 1rem 1rem 2rem;
+  background: #fff;
+  border: 1px solid #bfbfbf;
+  padding: 20px;
+  border-radius: 10px;
+}
+/* End of repository component and subcomponent styling */
+/* Search component stylings below */
+
+.containerInSearch {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.searchResults {
+  position: absolute;
+  top: 75%;
+  left: 0;
+  z-index: 1;
+  background-color: #fff;
+  border: 1px solid #b8b7b7;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 100%;
+}
+
+.searchResults > div {
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgb(156, 156, 156);
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+.searchResultImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.searchResultName {
+  cursor: pointer;
+  font-weight: bold;
+}
+.seeAllButton {
+  margin-top: 15px;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.seeAllButton:hover,
+.containerInSearch button:hover {
+  background-color: #2f3442;
+}
+/* End of search components */
+/* subscription component stylings below */
+.subscriptions {
+  border: none;
+
+  padding: 20px;
+  width: 40%;
+  word-break: break-all;
+  word-wrap: break-word;
+  border-radius: 15px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  margin-top: 1rem;
+  background-color: whitesmoke;
+}
+.containerInSubscription {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.subscriptions div {
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgb(202, 202, 202);
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+.ownerProfilePage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 15px;
+  cursor: pointer;
+}
+.ownerProfilePage img {
+  width: 20%;
+  height: 15%;
+  border-radius: 50%;
+}
+.userSubscriptionOwner {
+  padding: 1rem;
+  text-align: center;
+}
+.noSubscription {
+  margin: 3rem;
+  color: red;
+}
+/* Style in followers and following below */
+.containerInFollowers,
+.containerInFollowing {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.containerInFollowers > div,
+.containerInFollowing > div {
+  width: 15%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  overflow: hidden;
+  border: 1px solid rgb(160, 160, 160);
+  margin: 10px;
+  padding: 1.25rem;
+  border-radius: 10px;
+  word-break: break-all;
+  text-align: center;
+}
+.containerInFollowers > div img,
+.containerInFollowing > div img {
+  border-radius: 50%;
+  width: 50%;
+}
