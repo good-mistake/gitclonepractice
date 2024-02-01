@@ -5,7 +5,7 @@ import Contribution from "./Contribution";
 import Language from "./Language";
 import Updaterepo from "./Updaterepo.tsx";
 import Gettopics from "./Gettopics";
-import Tree from "./Tree";
+import Tree from "./Tree.tsx";
 import { useNavigate } from "react-router-dom";
 
 const Repository = () => {
